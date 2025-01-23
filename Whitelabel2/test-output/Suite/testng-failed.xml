@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="test.classes.Verify_Playercount2">
+        <methods>
+          <include name="playercount"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- test.classes.Verify_Playercount2 -->
+      <class name="test.classes.Verify_Registerplayer">
+        <methods>
+          <include name="registerplayer"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- test.classes.Verify_Registerplayer -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
