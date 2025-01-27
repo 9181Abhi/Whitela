@@ -28,6 +28,14 @@ public class Category_pomclass {
 	}
 	
 	
+	@FindBy(xpath="(//a[text()='Categories']")
+	private WebElement categories;
+	public void clickcategories()
+	{
+		categories.click();
+	}
+	
+	
 	@FindBy(xpath="(//*[name()='svg'][@stroke='currentColor'])[5]")
 	private WebElement gameclose;
 	public void clickgameclose()
