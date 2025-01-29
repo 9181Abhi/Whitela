@@ -12,12 +12,17 @@ import pom.classes.Category_pomclass;
 import pom.classes.Categorycount_Pomclass;
 import pom.classes.Registerpomclass;
 import pom.classes.Testbaseclass;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Map;
 public class Verify_categorycount extends Testbaseclass
 {
 
 	@Test
-	public void category() throws InterruptedException
+	public void category() throws InterruptedException, IOException
 	{
 		Registerpomclass register = new Registerpomclass(driver);
 		register.languagebtn();
@@ -42,7 +47,7 @@ public class Verify_categorycount extends Testbaseclass
 		category.clickDingdong();
 		
 		Thread.sleep(3000);
-		System.out.println("Start the json");
+		System.out.println("Start the json");	
 		//RestAssured.baseURI = "https://wl2-test-alb.dev-diamondteam.com/api/";
 		System.out.println("pass base url");
         // Call the API and get the response
@@ -68,10 +73,37 @@ public class Verify_categorycount extends Testbaseclass
 //                .log().all() // Logs the response details
                 .extract()
                 .response();
+        
+        // Convert response to JsonNode
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode jsonNode = objectMapper.readTree(response.getBody().asInputStream());
+System.out.println(jsonNode);
 
+//String gamesArray = jsonNode.path("data").path("gameInfo").path("data").path("total").asText();
+String total = jsonNode.path("data").path("gameInfo").path("total").asText();
+System.out.println(total);
+
+//if (gamesArray.isArray()) {
+//    for (JsonNode game : gamesArray) {
+//        String gameId = game.path("_id").asText();
+//        String gameName = game.path("name").asText();
+//        System.out.println("Game ID: " + gameId + ", Name: " + gameName);
+//    }
+//}
+        // Iterate through JSON keys
+//        System.out.println("Iterating JSON Keys:");
+//        Iterator<Map.Entry<String, JsonNode>> fields = jsonNode.fields();
+//        while (fields.hasNext()) {
+//            Map.Entry<String, JsonNode> field = fields.next();
+//            System.out.println("Key: " + field.getKey() + ", Value: " + field.getValue());
+//        }
+        
+
+//        String resp =  response.getBody().asString();
         // Log response details programmatically
-        System.out.println("Response Status Code: " + response.getStatusCode());
-        System.out.println("Response Body: " + response.getBody().asString());
+      //  System.out.println("Response Status Code: " + response.getStatusCode());
+//        System.out.println("Response Body: " + resp);
+       // int total=response.jsonPath().
 
 //			System.out.println("Response: " + response);
 
@@ -81,11 +113,12 @@ public class Verify_categorycount extends Testbaseclass
 //        Thread.sleep(2500);
 //        // Parse the total count from the response
 //        System.out.println(response);
-//        int totalGames = response.jsonPath().getInt("total");
+//        int totalGames = response.jsonPath().getInt("data.data");
+//        System.out.println(response.jsonPath().getInt("data.data"));
 //      
-//        System.out.println("Total Games in Category: " + totalGames);
+//       System.out.println("Total Games in Category: " + totalGames);
 //		
-//     	Thread.sleep(2000);
+     	Thread.sleep(2000);
 		
 			
 		driver.close();

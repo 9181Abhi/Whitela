@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-28T15:51:00 IST" name="Default suite" finished-at="2025-01-28T15:51:36 IST" duration-ms="36062">
+  <suite started-at="2025-01-29T18:32:43 IST" name="Default suite" finished-at="2025-01-29T18:33:17 IST" duration-ms="34325">
     <groups>
     </groups>
-    <test started-at="2025-01-28T15:51:00 IST" name="Default test" finished-at="2025-01-28T15:51:36 IST" duration-ms="36062">
+    <test started-at="2025-01-29T18:32:43 IST" name="Default test" finished-at="2025-01-29T18:33:17 IST" duration-ms="34325">
       <class name="test.classes.Verify_categorycount">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.classes.Verify_categorycount@7d20d0b]" started-at="2025-01-28T15:51:00 IST" name="setup" finished-at="2025-01-28T15:51:16 IST" duration-ms="16101" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.classes.Verify_categorycount@d35dea7]" started-at="2025-01-29T18:32:43 IST" name="setup" finished-at="2025-01-29T18:32:58 IST" duration-ms="14975" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="category()[pri:0, instance:test.classes.Verify_categorycount@7d20d0b]" started-at="2025-01-28T15:51:16 IST" name="category" finished-at="2025-01-28T15:51:36 IST" duration-ms="19830" status="PASS">
+        <test-method signature="category()[pri:0, instance:test.classes.Verify_categorycount@d35dea7]" started-at="2025-01-29T18:32:58 IST" name="category" finished-at="2025-01-29T18:33:17 IST" duration-ms="19281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- category -->
