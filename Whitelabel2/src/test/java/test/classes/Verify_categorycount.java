@@ -37,15 +37,8 @@ public class Verify_categorycount extends Testbaseclass
 		Thread.sleep(4000);
 		
 		
-		
-//		WebElement countarcade=driver.findElement(By.xpath("(//p[@class='gc-sub-title text-categories_game_count'])[5]"));
-//		String arcadecount=countarcade.getText();
-//		
-//		System.out.println("print");
-//		System.out.println(arcadecount);
-//		
-//		Thread.sleep(3000);
-//		 
+
+	 
 		System.out.println("Enter into Dingdong..");
 		Category_pomclass category= new  Category_pomclass(driver);
 		category.clickcategory();
@@ -56,12 +49,10 @@ public class Verify_categorycount extends Testbaseclass
 		System.out.println("Start the json");	
 		//RestAssured.baseURI = "https://wl2-test-alb.dev-diamondteam.com/api/";
 		System.out.println("pass base url");
-        // Call the API and get the response
-		   // Define the API endpoint
-		// Define the API endpoint
+       
 		String endpoint = "https://wl2-test-alb.dev-diamondteam.com/api/user/user/listProviderGame";
 
-		// Create a JSON object for the payload
+		
 		JSONObject jsonPayload = new JSONObject();
 		jsonPayload.put("category_code", "dingdong");
 		jsonPayload.put("search_term", "");
@@ -83,7 +74,7 @@ public class Verify_categorycount extends Testbaseclass
 		        .extract()
 		        .response();
 
-		// Print response details
+		
 		System.out.println("Response Code: " + response.getStatusCode());
 		System.out.println("Response Body: " + response.getBody().asString());
 		
@@ -97,43 +88,7 @@ public class Verify_categorycount extends Testbaseclass
 		
 
 
-//		// Convert response to JsonNode
-//		ObjectMapper objectMapper = new ObjectMapper();
-//		JsonNode jsonNode = objectMapper.readTree(response.getBody().asInputStream());
-//
-//		// Print full JSON response
-//		System.out.println(jsonNode);
-//		System.out.println("Exist");
-//
-//		// Extract gameInfo -> categories array
-//		JsonNode categoriesArray = jsonNode.path("data").path("gameInfo").path("data");
-//		System.out.println(categoriesArray);
 
-//		int dingdongTotal = 0;
-//
-//		// Initialize variable to store the data for the 'dingdong' category
-//		JsonNode dingdongCategoryData = null;
-//
-//		// Iterate through categories and find "dingdong"
-//		if (categoriesArray.isArray()) {
-//		    for (JsonNode category1 : categoriesArray) {
-//		        String categoryCode = category1.path("category_code").asText();
-//		        if ("dingdong".equalsIgnoreCase(categoryCode)) {
-//		            dingdongCategoryData = category1; // Store the entire category data
-//		            dingdongTotal = category1.path("total").asInt(); // Extract total games count
-//		            break; // Stop loop after finding dingdong category
-//		        }
-//		    }
-//		}
-//
-//		// After processing, check if the dingdong category data exists
-//		if (dingdongCategoryData != null) {
-//		    // Process the data for dingdong category
-//		    System.out.println("Dingdong Category Data: " + dingdongCategoryData.toString());
-//		    System.out.println("Total Games in Dingdong category: " + dingdongTotal);
-//		} else {
-//		    System.out.println("Dingdong category not found in the response.");
-//		}
 	Thread.sleep(2000);
 	
 	
