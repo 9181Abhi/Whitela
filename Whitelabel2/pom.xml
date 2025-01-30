@@ -38,7 +38,11 @@
     <version>5.2.5</version>
 </dependency>
 
-
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20210307</version>
+</dependency>
 
 <!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
 <dependency>
