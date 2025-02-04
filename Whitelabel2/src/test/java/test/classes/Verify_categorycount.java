@@ -12,6 +12,7 @@ import pom.classes.Category_pomclass;
 import pom.classes.Categorycount_Pomclass;
 import pom.classes.Registerpomclass;
 import pom.classes.Testbaseclass;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
@@ -35,64 +36,202 @@ public class Verify_categorycount extends Testbaseclass
 		Thread.sleep(2000);
 		register.englishlangbtn();
 		Thread.sleep(4000);
+	
 		
-		
-
-	 
-		System.out.println("Enter into Dingdong..");
 		Category_pomclass category= new  Category_pomclass(driver);
 		category.clickcategory();
-		Thread.sleep(1500);
-		category.clickDingdong();
+		Thread.sleep(1000);
+		category.clickslot();
+		Thread.sleep(1000);
+		int slotcount=AllCategory_Count.getCategoryTotalGames("slots");
+		int allslotgames=6809;
 		
-		Thread.sleep(3000);
-		System.out.println("Start the json");	
-		//RestAssured.baseURI = "https://wl2-test-alb.dev-diamondteam.com/api/";
-		System.out.println("pass base url");
-       
-		String endpoint = "https://wl2-test-alb.dev-diamondteam.com/api/user/user/listProviderGame";
-
+		if(slotcount == allslotgames)
+		{
+			System.out.println("no any  games are disable  for slot category");
+		}
 		
-		JSONObject jsonPayload = new JSONObject();
-		jsonPayload.put("category_code", "dingdong");
-		jsonPayload.put("search_term", "");
-		jsonPayload.put("provider_name", "");
-		jsonPayload.put("dropdown_filter", false); // False as per the requirement
-
-		// Print payload for debugging
-		System.out.println("Request Payload: " + jsonPayload.toString());
-
-		// Make the API request
-		System.out.println("Sending Request...");
-		Response response = RestAssured.given()
-		        .header("Content-Type", "application/json")
-		        .header("Origin", "https://wl2-test-user.dev-diamondteam.com")
-		        .body(jsonPayload.toString())  // Convert JSONObject to string for request
-		        .log().all()
-		        .post(endpoint)
-		        .then()
-		        .extract()
-		        .response();
-
+		else if(allslotgames> slotcount)
+		{
+			int disableslotcount=allslotgames -slotcount ;
+			System.out.println(disableslotcount+"- Games are disable for slot category");
+			System.out.println();
+		}
+		Thread.sleep(1000);
 		
-		System.out.println("Response Code: " + response.getStatusCode());
-		System.out.println("Response Body: " + response.getBody().asString());
-		
-		ObjectMapper objectMapper = new ObjectMapper();
-		JsonNode jsonNode = objectMapper.readTree(response.getBody().asInputStream());
-		
-		
-		String categoriesArray = jsonNode.path("data").path("gameInfo").path("total").asText();
-		System.out.println("Final result");
-		System.out.println(categoriesArray);
-		
-
-
-
-	Thread.sleep(2000);
 	
-	
-	driver.close();
+		
+		category.clickcategory();
+		Thread.sleep(1000);
+		category.clickArcades();
+		Thread.sleep(1000);
+		int arcadecount =AllCategory_Count.getCategoryTotalGames("arcades");
+		int allarcadegames=388;
+		
+		if(arcadecount == allarcadegames)
+		{
+			System.out.println("no any games are disable for arcade category");
+		}
+		
+		else if(allarcadegames>arcadecount)
+		{
+			int disablearcadecount=allarcadegames - arcadecount;
+			System.out.println(disablearcadecount+"- Games are disable for arcade category");
+			System.out.println();
+		}
+		
+		
+		Thread.sleep(1000);
+		
+		
+		category.clickcategory();
+		Thread.sleep(1000);
+		category.clickLivecasino();
+		Thread.sleep(1000);
+		int livecasinocount=AllCategory_Count.getCategoryTotalGames("live-casino");
+		int alllivecasinogames=673;
+		
+		if(livecasinocount==alllivecasinogames)
+		{
+			System.out.println("no any games are disable for Live casino category ");
+		}
+		
+		else if(alllivecasinogames > livecasinocount)
+		{
+			int disbablelivecasinocount=alllivecasinogames - livecasinocount;
+			System.out.println(disbablelivecasinocount+"- Games are disble for Live casino category");
+			System.out.println();
+		}
+		Thread.sleep(1000);
+		
+		
+		
+		category.clickcategory();
+		Thread.sleep(1000);
+		category.clicksportbooks();
+		Thread.sleep(1000);
+		int sportbookcount=AllCategory_Count.getCategoryTotalGames("sportsbook");
+		int allsportbookgames=351;
+		
+		if(sportbookcount==allsportbookgames)
+		{
+			System.out.println("no any games are disable for sportbook category");
+		}
+		
+		else if(allsportbookgames > sportbookcount)
+		{
+			int disablesportsbook=allsportbookgames- sportbookcount;
+			System.out.println(disablesportsbook+"- Games are disble for sportbook category ");
+			System.out.println();
+		}
+		Thread.sleep(1000);
+		
+		
+		category.clickcategory();
+		Thread.sleep(1000);
+		category.clickcrashgame();
+		Thread.sleep(1000);
+		int crashgamecount=AllCategory_Count.getCategoryTotalGames("crash-game");
+		int allcrashgamecount=62;
+		
+		if(crashgamecount==allcrashgamecount)
+		{
+			System.out.println("no any games are disable for Crash game category");
+		}
+		
+		else if(allcrashgamecount > crashgamecount)
+		{
+			int disablcrashgame=allcrashgamecount-crashgamecount;
+			System.out.println(disablcrashgame+"- Games are disble for Crash game category");
+		}
+		Thread.sleep(1000);
+		
+		
+		category.clickcategory();
+		Thread.sleep(1000);
+		category.clicklootery();
+		Thread.sleep(1000);
+		int lotterycount=AllCategory_Count.getCategoryTotalGames("lottery");
+		int alllotterycount=19;
+		
+		if(lotterycount==alllotterycount)
+		{
+			System.out.println("no any games are disable for lottery category");
+		}
+		
+		else if(alllotterycount>lotterycount)
+		{
+			int disablelottery=alllotterycount-lotterycount;
+			System.out.println(disablelottery+"-Games are disble for lottery category");
+			System.out.println();
+		}
+		Thread.sleep(1000);
+		
+		
+		category.clickcategory();
+		Thread.sleep(1000);
+		category.clickcardgames();
+		Thread.sleep(1000);
+		int cardgamecount=AllCategory_Count.getCategoryTotalGames("card-games");
+		int allcardgamecount=46;
+		
+		if(cardgamecount==allcardgamecount)
+		{
+			System.out.println("no any games are disable for Card game category");
+		}
+		
+		else if(allcardgamecount>cardgamecount)
+		{
+			int disblecardgame=allcardgamecount-cardgamecount;
+			System.out.println(disblecardgame+"-Games are disble for card game category");
+			System.out.println();
+		}
+		Thread.sleep(1000);
+		
+		
+		category.clickcategory();
+		Thread.sleep(1000);
+		category.clickArcades();
+		Thread.sleep(1000);
+		int dingdongcount=AllCategory_Count.getCategoryTotalGames("dingdong");
+		int alldingdonggamecount=15;
+		
+		if(dingdongcount==alldingdonggamecount)
+		{
+			System.out.println("no any games are disable for Dingdong category");
+		}
+		
+		else if(alldingdonggamecount>dingdongcount)
+		{
+			int disbledingdong=alldingdonggamecount-dingdongcount;
+			System.out.println(disbledingdong+"-Games are disble for Dingdong category");
+			System.out.println();
+		}
+		Thread.sleep(1000);
+		
+		
+		category.clickcategory();
+		Thread.sleep(1000);
+		category.clickFishing();
+		Thread.sleep(1000);
+		int fishingcount=AllCategory_Count.getCategoryTotalGames("fishing");
+		int allfishingcount=79;
+		
+		if(fishingcount==allfishingcount)
+		{
+			System.out.println("no any games are disable for Fishing category");
+		}
+		
+		else if(allfishingcount>fishingcount)
+		{
+			int disblefishing=allfishingcount-fishingcount;
+			System.out.println(disblefishing+"-Games are disble for Fishing category");
+			System.out.println();
+		}
+		Thread.sleep(1000);
+		
+		
+		driver.close();		
 	
 
 	
@@ -145,134 +284,3 @@ public class Verify_categorycount extends Testbaseclass
         
         
         
-//        String requestBody = "[{\r\n"
-//                + "  \"search_term\": \"\",\r\n"
-//                + "  \"provider_name\": \"\",\r\n"
-//                + "  \"category_code\": \"dingdong\",\r\n"
-//                + "  \"dropdown_filter\": true\r\n"
-//                + "}]";
-
-        // Convert String to JsonArray
-//        JsonArray jsonArray1 = JsonParser.parseString(requestBody).getAsJsonArray();
-//        
-//        JSONObject jsonPayload = new JSONObject();
-//        jsonPayload.put("category_code", "dingdong");
-//        jsonPayload.put("dropdown_filter", "true");
-//        System.out.println("enter log ");
-////        jsonPayload.put("age", 30);
-////        jsonPayload.put("email", "johndoe@example.com");
-//        
-//        
-//
-//        // Make the API request
-//        Response response = RestAssured.given()
-//                .header("Content-Type", "application/json")
-//                .header("Origin", "https://wl2-test-user.dev-diamondteam.com")
-//               // .body(jsonPayload)  // Convert JsonArray to string
-//              //  .log().all()
-//                .post(endpoint)
-//                .then()
-//                .extract()
-//                .response();
-//        
-//        System.out.println("Exit log");
-//
-//        // Convert response to JsonNode
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        JsonNode jsonNode = objectMapper.readTree(response.getBody().asInputStream());
-//
-//        // Print full JSON response
-//        System.out.println(jsonNode);
-//
-//        // Extract gameInfo -> data array
-//        JsonNode gameDataArray = jsonNode.path("data").path("gameInfo").path("data");
-//        System.out.println(gameDataArray);
-        
-//        String gamesArray = jsonNode.path("data").path("gameInfo").path("data").path("total").asText();
-//      String total = jsonNode.path("data").path("gameInfo").path("total").asText();
-        
-
-//        int dingdongCount = 0;
-//
-//        // Iterate through each game and count the ones with category_code = "dingdong"
-//        if (gameDataArray.isArray()) {
-//            for (JsonNode game : gameDataArray) {
-//                String categoryCode = game.path("category_code").asText();
-//                if ("dingdong".equalsIgnoreCase(categoryCode)) {
-//                    dingdongCount++;
-//                }
-//            }
-//        }
-
-//        System.out.println("Dingdong Category Count: " + dingdongCount);
-//    
-
-//        String requestbody="[{\r\n"
-//        		+ "  \"search_term\": \"\",\r\n"
-//        		+ "  \"provider_name\": \"\",\r\n"
-//        		+ "  \"category_code\": \"dingdong\",\r\n"
-//        		+ "  \"dropdown_filter\": true\r\n"
-//        		+ "  \r\n"
-//        		+ "}]";
-//        
-//        JsonArray jsonarray1= JsonParser.parseString(requestbody).getAsJsonArray();
-//        
-//        // Make the API request and log the response
-//        Response response = RestAssured
-//                .given()
-//                .header("Content-Type", "application/json")
-//                .header("Origin","https://wl2-test-user.dev-diamondteam.com")
-////                .header("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vd2wyLXRlc3QtYWxiLmRldi1kaWFtb25kdGVhbS5jb20vYXBpL3VzZXIvdXNlci9sb2dpbiIsImlhdCI6MTczNzk1NzMxMSwibmJmIjoxNzM3OTU3MzExLCJqdGkiOiI0YjB3R1k4bTM4aEI0S2p0Iiwic3ViIjoiNjZiNDVhN2Y0ZWE0ZDkzNDkyMGNkNjgyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.2pP9xSPi2BsgBPxiwy387d4WkYGmrxgA1NFmeZXSF6k")
-//                .body(jsonarray1.toString())
-//                .log().all() // Logs the request details
-//                .post(endpoint)
-//                .then()
-////                .log().all() // Logs the response details	5555
-//                .extract()
-//                .response();
-//        
-//        // Convert response to JsonNode
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        JsonNode jsonNode = objectMapper.readTree(response.getBody().asInputStream());
-//System.out.println(jsonNode);
-//
-////String gamesArray = jsonNode.path("data").path("gameInfo").path("data").path("total").asText();
-//String total = jsonNode.path("data").path("gameInfo").path("total").asText();
-//System.out.println(total);
-
-//if (gamesArray.isArray()) {
-//    for (JsonNode game : gamesArray) {
-//        String gameId = game.path("_id").asText();
-//        String gameName = game.path("name").asText();
-//        System.out.println("Game ID: " + gameId + ", Name: " + gameName);
-//    }
-//}
-        // Iterate through JSON keys
-//        System.out.println("Iterating JSON Keys:");
-//        Iterator<Map.Entry<String, JsonNode>> fields = jsonNode.fields();
-//        while (fields.hasNext()) {
-//            Map.Entry<String, JsonNode> field = fields.next();
-//            System.out.println("Key: " + field.getKey() + ", Value: " + field.getValue());
-//        }
-        
-
-//        String resp =  response.getBody().asString();
-        // Log response details programmatically
-      //  System.out.println("Response Status Code: " + response.getStatusCode());
-//        System.out.println("Response Body: " + resp);
-       // int total=response.jsonPath().
-
-//			System.out.println("Response: " + response);
-
-			// Check the status code
-			
-        
-//        Thread.sleep(2500);
-//        // Parse the total count from the response
-//        System.out.println(response);
-//        int totalGames = response.jsonPath().getInt("data.data");
-//        System.out.println(response.jsonPath().getInt("data.data"));
-//      
-//       System.out.println("Total Games in Category: " + totalGames);
-//		
-     
