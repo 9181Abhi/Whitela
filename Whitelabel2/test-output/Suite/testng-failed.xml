@@ -9,6 +9,12 @@
           <include name="setup"/>
         </methods>
       </class> <!-- test.classes.Verify_Playercount2 -->
+      <class name="test.classes.Verify_Playercount">
+        <methods>
+          <include name="setup"/>
+          <include name="playercount"/>
+        </methods>
+      </class> <!-- test.classes.Verify_Playercount -->
       <class name="test.classes.Verify_Registerplayer">
         <methods>
           <include name="registerplayer"/>

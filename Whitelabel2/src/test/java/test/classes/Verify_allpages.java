@@ -42,7 +42,7 @@ public class Verify_allpages  extends Testbaseclass
 		register1.click_New_Pin();
 		register1.click_Pin1();
 		register1.click_Pin2();
-		register1.click_Ok_Authentication();
+		register1.click_Okay();;
 		Thread.sleep(10000);
 		
 		Allpages_Pomclass allpages= new Allpages_Pomclass(driver);

@@ -38,7 +38,7 @@ public class Registration_page_changes extends Testbaseclass {
 		register.Click_InnerRegisterbtn();
 		Thread.sleep(20000);
 
-		System.out.println("Here Start the sucesscondition");
+		
 		String ExpectURL="https://wl2-test-user.dev-diamondteam.com/login-pin";
 		String actualUrl=driver.getCurrentUrl();
 		if(ExpectURL.equalsIgnoreCase(actualUrl)) 
@@ -83,7 +83,7 @@ public class Registration_page_changes extends Testbaseclass {
         register.click_New_Pin();
         register.click_Pin1();
         register.click_Pin2();
-        register.click_Ok_Authentication();
+        register.click_Okay();
 		Thread.sleep(10000);
 		
 
@@ -95,7 +95,7 @@ public class Registration_page_changes extends Testbaseclass {
 	            WebElement popupCloseButton = driver.findElement(By.xpath("//div[@class='text-center depo-okbtn']")); 
 	                    
 	            popupCloseButton.click();
-	            System.out.println("Popup closed successfully.");
+	            
 	        } 	catch (TimeoutException e) {
 	            System.out.println("Popup not displayed. Proceeding to the next step...");
 	        } 	catch (NoSuchElementException e) {
@@ -119,14 +119,13 @@ public class Registration_page_changes extends Testbaseclass {
 				register1.Click_Accname1();
 				register1.Click_Accno1();
 				Thread.sleep(1000);
-				register1.Click_InnerRegisterbtn();
-				System.out.println("Submit button click Sucessfully");
+				register1.Click_submitbtn();
 				Thread.sleep(5000);
 			
             
 			
-			System.out.println("Here start the sucess condition");
-			String Expectedurl="https://wl2-test-user.dev-diamondteam.com/deposit";
+			
+			String Expectedurl="https://wl2-test-user.dev-diamondteam.com/validation";
             String ActualURL=driver.getCurrentUrl();
            
             if(Expectedurl.equalsIgnoreCase(ActualURL))
@@ -135,20 +134,14 @@ public class Registration_page_changes extends Testbaseclass {
             	screenshot_class.ScreenShot(driver, "Suscessfullyregister");
             	driver.close();
             }
-//            else if(Expectedurl!=ActualURL)
-//            {
-//            	System.out.println("URL is Not match");
-//            	driver.close();            }
-//			
+	
             else {
 			
 			WebElement errormessages = driver.findElement(By.xpath("//span[@class='text-danger error-msg']")); 
-				System.out.println("Validation found");
+				
 			if(errormessages.isDisplayed()) 
 	            {
 	            	System.out.println("Validation Error Found: " + errormessages.getText());
-	            	screenshot_class.ScreenShot(driver, "Bankvalidation");
-	            	System.out.println("Validation Found");
 	            	screenshot_class.ScreenShot(driver, "Validationerror");
 	            	driver.close(); 
 	    }

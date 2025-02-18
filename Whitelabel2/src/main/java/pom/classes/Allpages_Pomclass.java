@@ -23,7 +23,7 @@ public class Allpages_Pomclass {
 	}
 	
 	
-	@FindBy(xpath="(//span[@class='sm-f'])[2]")
+	@FindBy(xpath="//span[text()='All Games']")
 	private WebElement Allgames;
 	public void clickallgames()
 	{
@@ -31,7 +31,7 @@ public class Allpages_Pomclass {
 	}
 	
 	
-	@FindBy(xpath="(//span[@class='sm-f'])[3]")
+	@FindBy(xpath="//span[text()='Referral']")
 	private WebElement Referral;
 	public void clickReferral()
 	{

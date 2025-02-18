@@ -66,7 +66,7 @@ public class Registerpomclass {
 	}
 	
 	
-	@FindBy(xpath="//a[@class='register text_button-register border-register']")
+	@FindBy(xpath="//a[text()='Register']")
 	private WebElement register;
 	public void registerbtn()
 	{
@@ -78,7 +78,7 @@ public class Registerpomclass {
 	private WebElement user;
 	public void user1()
 	{
-		user.sendKeys("Test2099");
+		user.sendKeys("Test3007");
 	}
 	
 	
@@ -104,7 +104,7 @@ public class Registerpomclass {
 	private WebElement phno;
 	public void Click_phonenumber()
 	{
-		phno.sendKeys("03214088010");
+		phno.sendKeys("0321404015");
 	}
 	
 	
@@ -113,7 +113,7 @@ public class Registerpomclass {
 	private WebElement Email;
 	public void Click_Email1()
 	{
-		Email.sendKeys("test2098@gmail.com");
+		Email.sendKeys("test3007@gmail.com");
 	}
 	
 	@FindBy(xpath="//div[@class='css-1xc3v61-indicatorContainer']")
@@ -135,21 +135,29 @@ public class Registerpomclass {
 	private WebElement Accname;
 	public void Click_Accname1()
 	{
-		Accname.sendKeys("Test2098");
+		Accname.sendKeys("Test3007");
 	}
 	
 	@FindBy(xpath="//input[@name='account_number']")
 	private WebElement Accno;
 	public void Click_Accno1()
 	{
-		Accno.sendKeys("012161260243");
+		Accno.sendKeys("01216106523");
 	}
 	
-	@FindBy(xpath="//button[@class='btn register-loader reg-sub loaderButton']")
+	@FindBy(xpath="//button[text()='Register']")
 	private WebElement InnerRegister;
 	public void Click_InnerRegisterbtn()
 	{
 		InnerRegister.click();
+	}
+	
+	
+	@FindBy(xpath="//button[text()='Submit']")
+	private WebElement submit;
+	public void Click_submitbtn()
+	{
+		submit.click();
 	}
 	
 //	@FindBy(xpath="//button[@class='btn register-loader reg-sub loaderButton']")
@@ -190,7 +198,7 @@ public class Registerpomclass {
 		}
 	}
 	
-	@FindBy(xpath="//button[@class='okay']")
+	@FindBy(xpath="//button[text()='Okay']")
 	private WebElement okay;
 	@FindBy(xpath="//button[@class='btn-okay security-ok text_button-pin_ok border-pin_okey loaderButton']")
 	private WebElement ok_auth;

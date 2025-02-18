@@ -21,12 +21,12 @@ public class Loginpomclass {
 	}
 
 	
-	@FindBy(xpath="//a[@class='login-wrapbtn text_button-login border-login']")
+	@FindBy(xpath="//a[text()='Login']")
 	private WebElement loginbtn;
 	public void loginbtnclick()
 	{
 		loginbtn.click();
-	}
+	}	
 	
 	@FindBy(xpath="//input[@name='username']")
 	private WebElement Username1;
