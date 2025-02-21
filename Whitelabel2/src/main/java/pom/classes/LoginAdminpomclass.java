@@ -24,16 +24,17 @@ public class LoginAdminpomclass {
 	private WebElement Admin_username;
 	public void Admin_usern() throws IOException
 	{
-		String a=excelsheet_class.testData(null, 0, 0);
+		String a=excelsheet_class.testData(null, 0, 1);
 		
 		Admin_username.sendKeys(a);
 	}
 	
 	@FindBy(xpath="//input[@name='password']")  		
 	private WebElement Admin_password;
-	public void Admin_pass()
+	public void Admin_pass() throws IOException
 	{
-		Admin_password.sendKeys("Test@123");
+		String b=excelsheet_class.testData(null, 1, 1);
+		Admin_password.sendKeys(b);
 	}
 	
 	
@@ -112,8 +113,6 @@ public class LoginAdminpomclass {
 		 dropdown.selectByValue("500");
 				
 	}
-	
-	
 	
 	
 	

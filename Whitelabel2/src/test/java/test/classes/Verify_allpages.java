@@ -1,6 +1,7 @@
 package test.classes;
 import java.awt.Dimension;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
@@ -27,6 +28,7 @@ public class Verify_allpages  extends Testbaseclass
 		Thread.sleep(2000);
 		
 		Loginpomclass login= new Loginpomclass(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
 		login.loginbtnclick();
 		Thread.sleep(1000);
 		login.username1();

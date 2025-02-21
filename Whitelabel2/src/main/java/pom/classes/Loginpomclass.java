@@ -29,12 +29,12 @@ public class Loginpomclass {
 	}	
 	
 	@FindBy(xpath="//input[@name='username']")
-	private WebElement Username1;
+	private WebElement Username;
 	public void username1() throws IOException
 	{
-		//username.sendKeys("Test50");
-		String username=excelsheet_class.testData(null, 1, 0);
-		Username1.sendKeys(username);
+		//Username.sendKeys("Akugale31");
+		String user=excelsheet_class.testData(null, 1, 0);
+		Username.sendKeys(user);
 
 	}
 	
@@ -43,7 +43,7 @@ public class Loginpomclass {
 	private WebElement Password;
 	public void password1() throws IOException
 	{
-		//Password.sendKeys("Test@123");
+		
 		String password=excelsheet_class.testData(null, 1, 1);
 		Password.sendKeys(password);
 	}

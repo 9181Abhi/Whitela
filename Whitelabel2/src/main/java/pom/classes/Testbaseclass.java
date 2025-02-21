@@ -26,19 +26,22 @@ public class Testbaseclass {
 	   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
 	   driver.manage().window().maximize();
 	   Thread.sleep(10000);
+	   Registerpomclass register=new Registerpomclass(driver);
+		register.languagebtn();
+		Thread.sleep(1000);
+		register.englishlangbtn();
+		Thread.sleep(2500);
 	   
 
-	   
-	   
 	}
 	
-//	@AfterClass
-//	public void teardown()
-//	{
-//		driver.quit();
-//		System.out.println("Browser is closed");
-//
-//
-//	}
+	@AfterClass
+	public void teardown()
+	{
+		driver.quit();
+		System.out.println("Browser is closed");
+
+
+	}
 }
 

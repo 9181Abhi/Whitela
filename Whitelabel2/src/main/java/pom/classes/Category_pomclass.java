@@ -36,7 +36,7 @@ public class Category_pomclass {
 	}
 	
 	
-	@FindBy(xpath="(//*[name()='svg'][@stroke='currentColor'])[5]")
+	@FindBy(xpath="//form[@class='search-bar']//span//*[name()='svg']")
 	private WebElement gameclose;
 	public void clickgameclose()
 	{

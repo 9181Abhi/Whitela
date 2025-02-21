@@ -17,7 +17,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 {
 
 	
-	@Test(enabled = false)
+	@Test(priority=0)
 	public void Allgamecategory() throws InterruptedException
 	{
 		Category_pomclass category=new Category_pomclass(driver);
@@ -25,7 +25,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 		category.clickcategory();
 		Thread.sleep(1500);
 		
-		List<WebElement>dropdownItems =driver.findElements(By.xpath("//div[@class='dropdown-content']"));
+		List<WebElement>dropdownItems =driver.findElements(By.xpath("//div[@class='dropdown-content text-menu_dropdown background-menu_dropdown']"));
 		List<String>categoryItems = new ArrayList<>();
 		
 		for (WebElement item : dropdownItems) {
@@ -39,7 +39,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 	        Thread.sleep(1500);
 		
 	        
-	        String Allcategories="Slots Arcades Live Casino Sportsbook Card Games Togel Dingdong Crash Game Fishing"; 
+	        String Allcategories="Slots Live Casino Sportsbook Crash Game Lottery Card Games Arcades Dingdong Fishing"; 
 	    	if(category1.equalsIgnoreCase(Allcategories))	
 	    		{
 	    			System.out.println("All Categories are shown and no more category Addded");
@@ -53,21 +53,15 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 	    		  
 	        
 	}
-	    
 	    category.clickcategory();
-	    driver.close();
+	   
+	  
 }
 	
 	@Test(priority = 1)
 	public void clickallcategorysearch() throws InterruptedException, IOException
 	{
-		
-		Registerpomclass register=new Registerpomclass(driver);
-		register.languagebtn();
-		Thread.sleep(1000);
-		register.englishlangbtn();
-		Thread.sleep(2500);
-		
+	
 		Category_pomclass category=new Category_pomclass(driver);
 		Thread.sleep(1500);
 		category.clickcategory();
@@ -100,9 +94,6 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 			screenshot_class.ScreenShot(driver, "Slotgamenotfound");
 			
 		}
-		
-		
-		
 		
 		
 		category.clickgameclose();
@@ -221,7 +212,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 		System.out.print(cardgameititle);
 		Thread.sleep(3000);
 		
-		String carddgametitle="Three Kings HKB Gaming";
+		String carddgametitle="Three Kings Provider Card Games";
 		String carddgameerrortile="No Game Found";
 		
 		Thread.sleep(1000);
@@ -238,10 +229,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 			
 		}
 		
-		
-		
-		
-		
+	
 		
 		category.clickgameclose();
 		Thread.sleep(10000);
@@ -383,7 +371,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 		}
 
 		
-		driver.close();
+	
 		
 		
 	}

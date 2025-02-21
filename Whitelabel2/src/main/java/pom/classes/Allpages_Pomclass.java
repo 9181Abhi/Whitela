@@ -15,7 +15,7 @@ public class Allpages_Pomclass {
 	}
 	
 	
-	@FindBy(xpath="(//span[@class='sm-f'])[1]")
+	@FindBy(xpath="//span[text()='Home']")
 	private WebElement Home;
 	public void clickHome()
 	{
@@ -101,8 +101,6 @@ public class Allpages_Pomclass {
 	{
 		Terms.click();
 	}
-	
-	
 	
 	
 	

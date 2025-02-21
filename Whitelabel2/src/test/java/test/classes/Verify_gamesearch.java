@@ -20,6 +20,12 @@ public class Verify_gamesearch extends Testbaseclass{
 	@Test(priority=0)
 	public void beforelogingamesearch() throws IOException, InterruptedException
 	{
+		
+		Registerpomclass register=new Registerpomclass(driver);
+		register.languagebtn();
+		Thread.sleep(1000);
+		register.englishlangbtn();
+		Thread.sleep(1000);
 		Scrolling_class.scrollDown1(driver);
 	
 		Thread.sleep(2000);
@@ -40,7 +46,7 @@ public class Verify_gamesearch extends Testbaseclass{
 		    String ExpectedTitle = title;
 
 		    if (ActualTitle.equals(ExpectedTitle)) {
-		        System.out.println("Game is found in home beforelogin");
+		        System.out.println("Game is found in Homepage beforelogin");
 		        screenshot_class.ScreenShot(driver, "Homepagegamefoundbeforelogin");
 				
 		    }
@@ -67,7 +73,7 @@ public class Verify_gamesearch extends Testbaseclass{
 	
 	
 	
-	@Test(priority=1)
+@Test(priority=1)
 	public void beforelogin() throws InterruptedException, IOException
 	{
 		
@@ -96,7 +102,7 @@ public class Verify_gamesearch extends Testbaseclass{
 		        System.out.println("Game is found in All games beforlogin");
 		        screenshot_class.ScreenShot(driver, "Allgamegamefoundbeforelogin");
 		    } else {
-		        System.out.println("Game is not foallgamessearchund");
+		        System.out.println("Game is not Found");
 		       
 		    }
 		   
@@ -121,10 +127,7 @@ public class Verify_gamesearch extends Testbaseclass{
 		  public void afterloginhomepage() throws InterruptedException, IOException
 		  {
 			  
-			  Registerpomclass register = new Registerpomclass(driver);
-				register.languagebtn();
-				register.englishlangbtn();
-				Thread.sleep(2000);
+			
 				
 				Loginpomclass login= new Loginpomclass(driver);
 				login.loginbtnclick();
@@ -142,7 +145,7 @@ public class Verify_gamesearch extends Testbaseclass{
 				register1.click_New_Pin();
 				register1.click_Pin1();
 				register1.click_Pin2();
-				register1.click_Ok_Authentication();
+				register1.click_Okay();;
 				Thread.sleep(10000);
 				
 				Scrolling_class.scrollDown(driver);
@@ -189,31 +192,7 @@ public class Verify_gamesearch extends Testbaseclass{
 		  @Test(priority=3)
 		  public void afterloginallgamessearch() throws InterruptedException, IOException
 		  {
-			  Registerpomclass register = new Registerpomclass(driver);
-				register.languagebtn();
-				register.englishlangbtn();
-				Thread.sleep(2000);
-				
-				Loginpomclass login= new Loginpomclass(driver);
-				login.loginbtnclick();
-				Thread.sleep(1000);
-				login.username1();
-				Thread.sleep(1000);
-				login.password1();
-				Thread.sleep(1000);
-				login.Innerloginbtn1();
-				Thread.sleep(3000);
-				
-				Thread.sleep(2000);
-				
-				Registerpomclass register1 = new Registerpomclass(driver);
-				register1.click_New_Pin();
-				register1.click_Pin1();
-				register1.click_Pin2();
-				register1.click_Ok_Authentication();
-				Thread.sleep(10000);
-				
-				
+					
 				Allpages_Pomclass allgame=new Allpages_Pomclass(driver);
 				allgame.clickallgames();
 				Thread.sleep(2000);

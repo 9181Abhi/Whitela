@@ -5,10 +5,10 @@
     <classes>
      <class name="test.classes.Registration_page_changes"/> 
      <class name="test.classes.Verify_Loginfunctionailty"/>   
+     <class name="test.classes.Verify_Logoutfunctionailty"/>
   	 <class name="test.classes.Verify_allpages"/> 
   	 <class name="test.classes.Verify_gamesearch"/>
-  	 <class name="test.classes.Verify_Allgamecategory"/>
-  	 <class name="test.classes.Verify_Logoutfunctionailty"/>
+  	 <class name="test.classes.Verify_Allgamecategory"/>	 
   	 <class name="test.classes.Verify_Languagechange"/>
   	 <class name="test.classes.Verify_Darkandlightmode"/>
   	 <class name="test.classes.Verify_Allprovider"/>
