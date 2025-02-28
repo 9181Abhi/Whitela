@@ -1,6 +1,7 @@
 package test.classes;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,8 @@ public class Verify_Languagechange extends Testbaseclass{
 	public void languagechange() throws InterruptedException, IOException
 	{
 		
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
 		List<WebElement>Indomenuitems =driver.findElements(By.xpath("//div[@class='menu-dropdown']"));
 		List<String>IndoheadermenuItems = new ArrayList<>();
 		
@@ -42,7 +45,7 @@ public class Verify_Languagechange extends Testbaseclass{
 	    Registerpomclass register= new Registerpomclass(driver);
 	    register.languagebtn();
 	    register.englishlangbtn();
-	    
+	    	
 	    Thread.sleep(5000);
 	    
 	    
@@ -79,7 +82,7 @@ public class Verify_Languagechange extends Testbaseclass{
 	    }
 	    else
 	    {
-	    	System.out.println("The number of indonessian headers and english header are not match");
+	    	System.out.println("The  indonessian headers and english header are not match");
 	    	System.out.println();
 	    }	
 	   

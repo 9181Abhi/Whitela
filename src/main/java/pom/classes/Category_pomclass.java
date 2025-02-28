@@ -26,6 +26,14 @@ public class Category_pomclass {
 	{
 		category.click();
 	}
+
+	@FindBy(xpath="(//*[name()='svg'][@class='down-arrow'])[1]")
+	private WebElement category1;
+	public void clickcategory1()
+	{
+		category.click();
+		//
+	}
 	
 	
 	@FindBy(xpath="(//a[text()='Categories']")

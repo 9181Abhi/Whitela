@@ -35,7 +35,6 @@ public class Depositrequest extends Testbaseclass{
 		
 		
 		
-		
 		WebElement depaccepttext=driver.findElement(By.xpath("//h3[text()='We Have Received Your Deposit Request']"));
 		String text=depaccepttext.getText();
 		
@@ -44,6 +43,7 @@ public class Depositrequest extends Testbaseclass{
 			System.out.println("Deposit request place sucessfully");
 			Thread.sleep(2000);
 			driver.close();
+			System.out.println();
 		}
 		else
 		{

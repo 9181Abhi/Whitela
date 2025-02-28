@@ -118,6 +118,7 @@ public class Verify_allpages  extends Testbaseclass
 		allpages.clickHelp();
 		String actualUrl7=driver.getCurrentUrl();
 		String expectedurl7="https://wl2-test-user.dev-diamondteam.com/help";
+		
 
 		Assert.assertEquals(actualUrl7, expectedurl7, "Help page not open");
 		System.out.println("Help page  open sucessfully");
@@ -147,7 +148,7 @@ public class Verify_allpages  extends Testbaseclass
 		screenshot_class.ScreenShot(driver, "Allprovider");
 		
 		
-		
+		System.out.println();
 		
 		Thread.sleep(2000);
 		driver.close();

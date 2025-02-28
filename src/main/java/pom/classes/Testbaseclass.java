@@ -22,15 +22,15 @@ public class Testbaseclass {
 	{
 	   WebDriverManager.chromedriver().setup();
 	   driver= new ChromeDriver();
-	   driver.get("https://wl2-test-user.dev-diamondteam.com/");
+	   driver.get("https://wl2-uat-user.dev-diamondteam.com/");
 	   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
 	   driver.manage().window().maximize();
 	   Thread.sleep(10000);
-	   Registerpomclass register=new Registerpomclass(driver);
-		register.languagebtn();
-		Thread.sleep(1000);
-		register.englishlangbtn();
-		Thread.sleep(2500);
+//	   Registerpomclass register=new Registerpomclass(driver);
+//		register.languagebtn();
+//		Thread.sleep(1000);
+//		register.englishlangbtn();
+//		Thread.sleep(2500);
 	   
 
 	}
@@ -38,8 +38,8 @@ public class Testbaseclass {
 	@AfterClass
 	public void teardown()
 	{
-		driver.quit();
-		System.out.println("Browser is closed");
+//		driver.quit();
+//		System.out.println("Browser is closed");
 
 
 	}

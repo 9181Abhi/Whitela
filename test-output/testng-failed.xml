@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.classes.Verify_Allgamecategory">
+      <class name="test.classes.Verify_allpages">
         <methods>
-          <include name="clickallcategorysearch"/>
           <include name="teardown"/>
+          <include name="clickallpages"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- test.classes.Verify_Allgamecategory -->
+      </class> <!-- test.classes.Verify_allpages -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

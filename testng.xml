@@ -11,11 +11,10 @@
   	 <class name="test.classes.Verify_Allgamecategory"/>	 
   	 <class name="test.classes.Verify_Languagechange"/>
   	 <class name="test.classes.Verify_Darkandlightmode"/>
-  	 
   	 <class name="test.classes.Verify_Allprovider"/>
   	 <class name="test.classes.Verify_categorycount"/>
   	 
       
-    </classes>
+    </classes>																															
   </test> <!-- Test -->	
 </suite> <!-- Suite -->

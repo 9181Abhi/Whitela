@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import pom.classes.Allpages_Pomclass;
 import pom.classes.LightandDarkmodepomclass;
 import pom.classes.Registerpomclass;
 import pom.classes.Testbaseclass;
@@ -29,7 +30,7 @@ public class Verify_Darkandlightmode extends Testbaseclass {
 		mode.clickGameprovider();
 		Thread.sleep(2000);
 		
-		
+		///SSSS
 		 WebElement Dark= driver.findElement(By.cssSelector("body > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"));
 		 Thread.sleep(1500);
 		 
@@ -42,7 +43,7 @@ public class Verify_Darkandlightmode extends Testbaseclass {
 		 toggle.click();
 		 Thread.sleep(2500);  
 		 
-		 WebElement Light=driver.findElement(By.cssSelector("img[alt='Nextspin']"));
+		 WebElement Light=driver.findElement(By.xpath("//a[@href='/habanero']//div[@class='item']//img[@class='img-fluid']"));
 		 System.out.println("Get on light mode game icon");
 		 String light=Light.getCssValue("Lightmode");
 		 System.out.println(light);
@@ -50,6 +51,7 @@ public class Verify_Darkandlightmode extends Testbaseclass {
 		 
 		 
 		 if(dark.equals(light))
+			 //S???S
 		 {
 			 System.out.println("Theme change sucessfully");
 		 }
@@ -69,12 +71,7 @@ public class Verify_Darkandlightmode extends Testbaseclass {
             e.printStackTrace();
 			
 		}
-            finally 
-            {
-            	driver.close();
-			
-		}
-		
+           
         
 
 }
@@ -87,13 +84,18 @@ public class Verify_Darkandlightmode extends Testbaseclass {
 		
 		try {
 			
+		Allpages_Pomclass allpages= new Allpages_Pomclass(driver);
+		allpages.clickHome();
+		Thread.sleep(1000);
+		
+		
 		
 		Scrolling_class.scrollDown(driver);
 		WebElement jackpotdark =driver.findElement(By.cssSelector("img[alt='vghvg']"));
 		String darkjackpot=	jackpotdark.getCssValue("Darkmodejackpot");
 		System.out.println(darkjackpot);
 		Thread.sleep(2000);
-		
+			
 		
 		WebElement toggle=driver.findElement(By.xpath("//div[@id='text-m']//*[name()='svg']"));
 		toggle.click();
@@ -120,12 +122,7 @@ public class Verify_Darkandlightmode extends Testbaseclass {
 			e.printStackTrace();
 		}
 		
-		finally
-		{
-			driver.close();
-		}
-		
-		
+				
 		
 		
 		
