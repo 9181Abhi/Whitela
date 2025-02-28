@@ -42,12 +42,12 @@ public class Verify_Allprovider  extends Testbaseclass{
 		else if (providercount > provideractualcount) 
 		{
             int addedCount = providercount - provideractualcount;
-            System.out.println("New providers added count: " + addedCount);
+            System.out.println("New providers or SubProvider added count: " + addedCount);
         } 
 		else
 		{
             int disabledCount = provideractualcount - providercount;
-            System.out.println("Providers disabled count: " + disabledCount);
+            System.out.println("Providers or Subprovider disabled count: " + disabledCount);
         }
 		driver.close();
 		
