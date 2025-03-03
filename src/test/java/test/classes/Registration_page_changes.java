@@ -39,7 +39,7 @@ public class Registration_page_changes extends Testbaseclass {
 		Thread.sleep(20000);
 
 		
-		String ExpectURL="https://wl2-test-user.dev-diamondteam.com/login-pin";
+		String ExpectURL="https://wl2-uat-user.dev-diamondteam.com/login-pin";
 		String actualUrl=driver.getCurrentUrl();
 		if(ExpectURL.equalsIgnoreCase(actualUrl)) 
 		{

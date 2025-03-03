@@ -78,7 +78,7 @@ public class Registerpomclass {
 	private WebElement user;
 	public void user1()
 	{
-		user.sendKeys("Test3007");
+		user.sendKeys("Test954");
 	}
 	
 	
@@ -113,7 +113,7 @@ public class Registerpomclass {
 	private WebElement Email;
 	public void Click_Email1()
 	{
-		Email.sendKeys("test3007@gmail.com");
+		Email.sendKeys("test954@gmail.com");
 	}
 	
 	@FindBy(xpath="//div[@class='css-1xc3v61-indicatorContainer']")
@@ -135,14 +135,14 @@ public class Registerpomclass {
 	private WebElement Accname;
 	public void Click_Accname1()
 	{
-		Accname.sendKeys("Test3007");
+		Accname.sendKeys("Test953");
 	}
 	
 	@FindBy(xpath="//input[@name='account_number']")
 	private WebElement Accno;
 	public void Click_Accno1()
 	{
-		Accno.sendKeys("01216106523");
+		Accno.sendKeys("01216101520");
 	}
 	
 	@FindBy(xpath="//button[text()='Register']")

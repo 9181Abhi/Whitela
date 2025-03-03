@@ -80,15 +80,15 @@ public class Verify_Logoutfunctionailty extends Testbaseclass{
 
 		// Validate Logout
 		String actualTitle = driver.getTitle();
-		String expectedTitle = "Home title";
+		String expectedTitle = "Home";
 
 		Assert.assertEquals(actualTitle, expectedTitle, "Logout not successful");
 		System.out.println("Logout successful");
 
-		// Capture Screenshot
+		// Capture Screenshot	
 		screenshot_class.ScreenShot(driver, "Logoutsuccessfully");
 
-		driver.close();
+	
 		
 		
 		

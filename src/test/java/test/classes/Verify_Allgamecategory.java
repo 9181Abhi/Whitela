@@ -17,9 +17,18 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 {
 
 	
-	@Test(priority=0)
+	@Test
 	public void Allgamecategory() throws InterruptedException
+	
+	
 	{
+		
+		Registerpomclass register=new Registerpomclass(driver);
+		register.languagebtn();
+		Thread.sleep(1000);
+		register.englishlangbtn();
+		Thread.sleep(2500);
+		
 		Category_pomclass category=new Category_pomclass(driver);
 		Thread.sleep(1500);
 		category.clickcategory();
@@ -34,12 +43,12 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 		
 		Thread.sleep(1500);
 		System.out.println("Categories Dropdown Items:");
-	    for (String category1 : categoryItems) {
+	    for (String category1 : categoryItems) {	
 	        System.out.println(category1);
 	        Thread.sleep(1500);
 		
 	        
-	        String Allcategories="Slots Live Casino Sportsbook Crash Game Lottery Card Games Arcades Dingdong Fishing"; 
+	        String Allcategories="Togel Slots Crash Game Live Casino Arcades Card Games Dingdong Sportsbook Fishing"; 
 	    	if(category1.equalsIgnoreCase(Allcategories))	
 	    		{
 	    			System.out.println("All Categories are shown and no more category Addded");
@@ -58,7 +67,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 	  
 }
 	
-	@Test(priority = 1)
+	@Test
 	public void clickallcategorysearch() throws InterruptedException, IOException
 	{
 	
@@ -280,7 +289,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 		System.out.print(Lotteryititle);
 		Thread.sleep(3000);
 		
-		String Lotterygametitle="Sydney HKB Gaming";
+		String Lotterygametitle="Sydney Togel";
 		String Lotterygameerrortile="No Game Found";
 		
 		Thread.sleep(1000);

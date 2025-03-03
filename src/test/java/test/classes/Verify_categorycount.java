@@ -116,6 +116,7 @@ public class Verify_categorycount extends Testbaseclass
 		if(sportbookcount==allsportbookgames)
 		{
 			System.out.println("no any games are disable for sportbook category");
+			System.out.println();
 		}
 		
 		else if(allsportbookgames > sportbookcount)
@@ -143,6 +144,7 @@ public class Verify_categorycount extends Testbaseclass
 		{
 			int disablcrashgame=allcrashgamecount-crashgamecount;
 			System.out.println(disablcrashgame+"- Games are disble for Crash game category");
+			System.out.println();
 		}
 		Thread.sleep(1000);
 		
@@ -220,6 +222,7 @@ public class Verify_categorycount extends Testbaseclass
 		if(fishingcount==allfishingcount)
 		{
 			System.out.println("no any games are disable for Fishing category");
+			System.out.println();
 		}
 		
 		else if(allfishingcount>fishingcount)

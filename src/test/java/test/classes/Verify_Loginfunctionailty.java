@@ -50,7 +50,7 @@ public class Verify_Loginfunctionailty extends Testbaseclass{
 		String actualtitle=driver.getTitle();
 	
 		
-		String expectedtitle="Home title";
+		String expectedtitle="Home";
 
 	Assert.assertEquals(expectedtitle, actualtitle, "Login not Sucessfully");
 		 System.out.println("Login Sucessfully");
@@ -74,9 +74,9 @@ public class Verify_Loginfunctionailty extends Testbaseclass{
 			    }
 			}
 			
-		Thread.sleep(10000);
+		Thread.sleep(2000);
 			
-		driver.close();
+	
 		
 		
 	}

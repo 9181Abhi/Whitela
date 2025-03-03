@@ -38,8 +38,8 @@ public class Testbaseclass {
 	@AfterClass
 	public void teardown()
 	{
-//		driver.quit();
-//		System.out.println("Browser is closed");
+		driver.quit();
+		System.out.println("Browser is closed");
 
 
 	}
