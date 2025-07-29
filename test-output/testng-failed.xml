@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.classes.Verify_Loginfunctionailty">
+      <class name="test.classes.Verify_Refferallink">
         <methods>
-          <include name="loginfunctionality"/>
           <include name="teardown"/>
           <include name="setup"/>
+          <include name="referallinkmenthod"/>
         </methods>
-      </class> <!-- test.classes.Verify_Loginfunctionailty -->
+      </class> <!-- test.classes.Verify_Refferallink -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

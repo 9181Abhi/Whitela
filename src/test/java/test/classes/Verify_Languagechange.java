@@ -40,7 +40,7 @@ public class Verify_Languagechange extends Testbaseclass{
 	        Thread.sleep(1500);
 	    }
 	    
-	  //  screenshot_class.ScreenShot(driver, "Indonessianlanguageheaders");
+	    screenshot_class.ScreenShot(driver, "Indonessianlanguageheaders");
 	    Thread.sleep(5000);
 	    Registerpomclass register= new Registerpomclass(driver);
 	    register.languagebtn();
@@ -67,11 +67,11 @@ public class Verify_Languagechange extends Testbaseclass{
 	        Thread.sleep(1500);
 	    }
 	    
-	   // screenshot_class.ScreenShot(driver, "Englishlanguageheaders");
+	    screenshot_class.ScreenShot(driver, "Englishlanguageheaders");
 	    Thread.sleep(5000);
 	    
 	   
-	    System.out.println("Comparing english and Indonessian language");
+	    System.out.println("Comparing english and Indonessian language Header Items");
 	    	
 	    if(IndoheadermenuItems==englishheadermenuItems)
 	    {
@@ -82,7 +82,7 @@ public class Verify_Languagechange extends Testbaseclass{
 	    }
 	    else
 	    {
-	    	System.out.println("The  indonessian headers and english header are not match");
+	    	System.out.println("Language chnage sucessfully for Header Items");
 	    	System.out.println();
 	    }	
 	   
@@ -110,7 +110,7 @@ public class Verify_Languagechange extends Testbaseclass{
 	        Thread.sleep(1500);
 	    }
 	   
-	   // screenshot_class.ScreenShot(driver, "EnglishlanguageFooter");
+	   screenshot_class.ScreenShot(driver, "EnglishlanguageFooter");
 	    
 	    register.languagebtn();
 	    Thread.sleep(1000);
@@ -136,9 +136,25 @@ public class Verify_Languagechange extends Testbaseclass{
 	        System.out.println(Header);
 	        Thread.sleep(1500);
 	    }
-	   // screenshot_class.ScreenShot(driver, "Indonessianlanguageheaders");
+	    screenshot_class.ScreenShot(driver, "Indonessianlanguageheaders");
 	    Thread.sleep(2000);
-	    driver.close();
+	    
+	    System.out.println("Comparing english and Indonessian Footer Items");
+    	
+	    if(IndofooterItems==EnglishfooterItems)
+	    {
+	    	for(int i=0; i<IndofooterItems.size();i++)
+	    	{
+	    		System.out.println("Indonessian"+ IndofooterItems.get(i) + "| Engish" + EnglishfooterItems.get(i));
+	    	}
+	    }
+	    else
+	    {
+	    	System.out.println("Language chnage sucessfully for Footer Items");
+	    	System.out.println();
+	    }	
+	   
+	 
 		
 	}
 

@@ -1,5 +1,6 @@
 package test.classes;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,11 +11,12 @@ import org.testng.annotations.Test;
 import pom.classes.LightandDarkmodepomclass;
 import pom.classes.Registerpomclass;
 import pom.classes.Testbaseclass;
+import utility.ckasses.screenshot_class;
 
 public class Verify_Allprovider  extends Testbaseclass{
 
 	@Test
-	public void allprovider() throws InterruptedException
+	public void allprovider() throws InterruptedException, IOException
 	{
 		Registerpomclass register= new Registerpomclass(driver);
 		Thread.sleep(2000);
@@ -33,6 +35,8 @@ public class Verify_Allprovider  extends Testbaseclass{
 		System.out.println("All provider count: "+ providercount);
 		Thread.sleep(1000);
 		
+		screenshot_class.ScreenShot(driver, "AllProvider");
+		
 		int provideractualcount=58;
 		
 		if (providercount == provideractualcount) {
@@ -49,7 +53,7 @@ public class Verify_Allprovider  extends Testbaseclass{
             int disabledCount = provideractualcount - providercount;
             System.out.println("Providers or Subprovider disabled count: " + disabledCount);
         }
-		driver.close();
+		
 		
 		
 	}

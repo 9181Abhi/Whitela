@@ -23,6 +23,8 @@ public class Verify_Logoutfunctionailty extends Testbaseclass{
 	@Test
 	public void logoutfunctionailty() throws InterruptedException, IOException
 	{
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15000));
 		Registerpomclass register = new Registerpomclass(driver);
 		register.languagebtn();
 		register.englishlangbtn();
@@ -60,34 +62,36 @@ public class Verify_Logoutfunctionailty extends Testbaseclass{
 		        WebElement popupCloseButton = popupCloseButtons.get(0);
 		        popupCloseButton.click();
 		        System.out.println("Popup closed.");
-		        Thread.sleep(1000); // Wait for the next popup to appear if any
+		        Thread.sleep(1000); 
 		    } else {  
 		        System.out.println("No more popups found. Proceeding to the next step...");
-		        break; // Exit the loop when no popup is found
+		        break; 
 		    }
 		}
 		
 
-		// Small wait to stabilize the UI
+		
 		Thread.sleep(2000);
 
-		// Logout Process
+		
 		Logout_Pomclass logout = new Logout_Pomclass(driver);
 		logout.clickprofile();
 		Thread.sleep(1000);
 		logout.clickLogout();
 		Thread.sleep(2000);
 
-		// Validate Logout
+		
 		String actualTitle = driver.getTitle();
 		String expectedTitle = "Home";
 
 		Assert.assertEquals(actualTitle, expectedTitle, "Logout not successful");
 		System.out.println("Logout successful");
 
-		// Capture Screenshot	
+		
 		screenshot_class.ScreenShot(driver, "Logoutsuccessfully");
 
+		
+		Thread.sleep(2500);
 	
 		
 		

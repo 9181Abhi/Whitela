@@ -60,7 +60,7 @@ public class Verify_gamesearch extends Testbaseclass{
 		catch (NoSuchElementException e) {
 			Thread.sleep(1000);
 		    System.out.println("Game is not found found");
-		    //driver.close();
+		  
 		}
 		 catch (Exception e) {
 			    System.out.println("An unexpected error occurred: " + e.getMessage());

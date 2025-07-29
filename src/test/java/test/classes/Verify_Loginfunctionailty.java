@@ -52,13 +52,13 @@ public class Verify_Loginfunctionailty extends Testbaseclass{
 		
 		String expectedtitle="Home";
 
-	Assert.assertEquals(expectedtitle, actualtitle, "Login not Sucessfully");
+		Assert.assertEquals(expectedtitle, actualtitle, "Login not Sucessfully");
 		 System.out.println("Login Sucessfully");
 		 screenshot_class.ScreenShot(driver, "User app login sucessfully");
 		 
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			// Wait for popup for a short time
-			Thread.sleep(2000); // Optional: Allow time for popup to appear
+			
+			Thread.sleep(2000); 
 
 			while (true) {
 			    List<WebElement> popupCloseButtons = driver.findElements(By.xpath("//div[@class='popup-box']//span[@class='close']//*[name()='svg']//*[name()='path' and contains(@fill,'none')]"));
@@ -67,10 +67,10 @@ public class Verify_Loginfunctionailty extends Testbaseclass{
 			        WebElement popupCloseButton = popupCloseButtons.get(0);
 			        popupCloseButton.click();
 			        System.out.println("Popup closed.");
-			        Thread.sleep(1000); // Wait for the next popup to appear if any
+			        Thread.sleep(1000); 
 			    } else {  
 			        System.out.println("No more popups found. Proceeding to the next step...");
-			        break; // Exit the loop when no popup is found
+			        break; 
 			    }
 			}
 			

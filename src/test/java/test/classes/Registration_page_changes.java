@@ -26,9 +26,14 @@ public class Registration_page_changes extends Testbaseclass {
 	public void registratiopagechange() throws InterruptedException, IOException
 	{
 		Registerpomclass register = new Registerpomclass(driver);
-		register.languagebtn();
-		register.englishlangbtn();
-		Thread.sleep(1000);
+//		register.languagebtn();
+//		System.out.println("Click language btn");
+//		
+//		register.englishlangbtn();
+//		Thread.sleep(1000);
+//		System.out.println("Clicked english button");
+		
+		Thread.sleep(5000);
 		
 		register.registerbtn();
 		register.user1();
@@ -37,9 +42,9 @@ public class Registration_page_changes extends Testbaseclass {
 		register.confirmpass1();	
 		register.Click_InnerRegisterbtn();
 		Thread.sleep(20000);
-
+				
 		
-		String ExpectURL="https://wl2-uat-user.dev-diamondteam.com/login-pin";
+		String ExpectURL="https://user-dev-wl2.api-victory.com/login-pin";
 		String actualUrl=driver.getCurrentUrl();
 		if(ExpectURL.equalsIgnoreCase(actualUrl)) 
 		{
@@ -49,14 +54,14 @@ public class Registration_page_changes extends Testbaseclass {
 		
 		else 
 		{
-			WebElement errorprimary = driver.findElement(By.xpath("//span[@class='text-danger error-msg']"));
+			WebElement errorprimary = driver.findElement(By.xpath("//span[@class='close']//*[name()='svg']//*[name()='path' and contains(@fill,'none')]"));
 			System.out.println("Validation found");
 			if(errorprimary.isDisplayed()) 
 	            {
-	            	System.out.println("Validation Error Found: " + errorprimary.getText());
-	            	//screenshot_class.ScreenShot(driver, "RegistrationValidation");
+				System.out.println("Validation Error Found: " + errorprimary.getText());
+	            	
 	            	System.out.println("Registration Validation Found");
-	            	//screenshot_class.ScreenShot(driver, "Validationerror");
+	            	screenshot_class.ScreenShot(driver, "RegistrationValidation");
 	            	driver.close(); 
 	    }
 			
@@ -76,7 +81,7 @@ public class Registration_page_changes extends Testbaseclass {
 		Thread.sleep(1000);	
 		register.click_Process_Button();
 
-    //   screenshot_class.ScreenShot(driver,"Pin Authentication Page");
+       screenshot_class.ScreenShot(driver,"Pin Authentication Page");
        
        Thread.sleep(10000);
        
@@ -91,7 +96,7 @@ public class Registration_page_changes extends Testbaseclass {
 		 
 		
 		 try {
-	            //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5)); 
+	         
 	            WebElement popupCloseButton = driver.findElement(By.xpath("//div[@class='text-center depo-okbtn']")); 
 	                    
 	            popupCloseButton.click();

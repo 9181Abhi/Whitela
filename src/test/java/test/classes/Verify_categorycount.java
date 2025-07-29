@@ -12,6 +12,7 @@ import pom.classes.Category_pomclass;
 import pom.classes.Categorycount_Pomclass;
 import pom.classes.Registerpomclass;
 import pom.classes.Testbaseclass;
+import utility.ckasses.screenshot_class;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -48,14 +49,15 @@ public class Verify_categorycount extends Testbaseclass
 		
 		if(slotcount == allslotgames)
 		{
-			System.out.println("no any  games are disable  for slot category");
+			System.out.println("no any  games are disable  for Slot category");
 		}
 		
 		else if(allslotgames> slotcount)
 		{
 			int disableslotcount=allslotgames -slotcount ;
-			System.out.println(disableslotcount+"- Games are disable for slot category");
+			System.out.println(disableslotcount+"- Games are disable for Slot category");
 			System.out.println();
+			screenshot_class.ScreenShot(driver, "Slot");
 		}
 		Thread.sleep(1000);
 		
@@ -70,14 +72,15 @@ public class Verify_categorycount extends Testbaseclass
 		
 		if(arcadecount == allarcadegames)
 		{
-			System.out.println("no any games are disable for arcade category");
+			System.out.println("no any games are disable for Arcade category");
 		}
 		
 		else if(allarcadegames>arcadecount)
 		{
 			int disablearcadecount=allarcadegames - arcadecount;
-			System.out.println(disablearcadecount+"- Games are disable for arcade category");
+			System.out.println(disablearcadecount+"- Games are disable for Arcade category");
 			System.out.println();
+			screenshot_class.ScreenShot(driver, "Arcade");
 		}
 		
 		
@@ -101,6 +104,7 @@ public class Verify_categorycount extends Testbaseclass
 			int disbablelivecasinocount=alllivecasinogames - livecasinocount;
 			System.out.println(disbablelivecasinocount+"- Games are disble for Live casino category");
 			System.out.println();
+			screenshot_class.ScreenShot(driver, "Live casino");
 		}
 		Thread.sleep(1000);
 		
@@ -124,6 +128,7 @@ public class Verify_categorycount extends Testbaseclass
 			int disablesportsbook=allsportbookgames- sportbookcount;
 			System.out.println(disablesportsbook+"- Games are disble for sportbook category ");
 			System.out.println();
+			screenshot_class.ScreenShot(driver, "Sportbook");
 		}
 		Thread.sleep(1000);
 		
@@ -145,6 +150,7 @@ public class Verify_categorycount extends Testbaseclass
 			int disablcrashgame=allcrashgamecount-crashgamecount;
 			System.out.println(disablcrashgame+"- Games are disble for Crash game category");
 			System.out.println();
+			screenshot_class.ScreenShot(driver, "Crash Game");
 		}
 		Thread.sleep(1000);
 		
@@ -166,6 +172,7 @@ public class Verify_categorycount extends Testbaseclass
 			int disablelottery=alllotterycount-lotterycount;
 			System.out.println(disablelottery+"-Games are disble for lottery category");
 			System.out.println();
+			screenshot_class.ScreenShot(driver, "Lottery");
 		}
 		Thread.sleep(1000);
 		
@@ -187,6 +194,7 @@ public class Verify_categorycount extends Testbaseclass
 			int disblecardgame=allcardgamecount-cardgamecount;
 			System.out.println(disblecardgame+"-Games are disble for card game category");
 			System.out.println();
+			screenshot_class.ScreenShot(driver, "Card Game");
 		}
 		Thread.sleep(1000);
 		
@@ -201,6 +209,8 @@ public class Verify_categorycount extends Testbaseclass
 		if(dingdongcount==alldingdonggamecount)
 		{
 			System.out.println("no any games are disable for Dingdong category");
+			System.out.println();
+			
 		}
 		
 		else if(alldingdonggamecount>dingdongcount)
@@ -208,6 +218,7 @@ public class Verify_categorycount extends Testbaseclass
 			int disbledingdong=alldingdonggamecount-dingdongcount;
 			System.out.println(disbledingdong+"-Games are disble for Dingdong category");
 			System.out.println();
+			screenshot_class.ScreenShot(driver, "Dingdong");
 		}
 		Thread.sleep(1000);
 		
@@ -230,11 +241,12 @@ public class Verify_categorycount extends Testbaseclass
 			int disblefishing=allfishingcount-fishingcount;
 			System.out.println(disblefishing+"-Games are disble for Fishing category");
 			System.out.println();
+			screenshot_class.ScreenShot(driver, "Fishing");
 		}
 		Thread.sleep(1000);
 		
 		
-		driver.close();		
+		
 	
 
 	

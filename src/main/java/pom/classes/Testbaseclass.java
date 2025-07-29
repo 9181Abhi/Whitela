@@ -22,7 +22,7 @@ public class Testbaseclass {
 	{
 	   WebDriverManager.chromedriver().setup();
 	   driver= new ChromeDriver();
-	   driver.get("https://wl2-uat-user.dev-diamondteam.com/");
+	   driver.get("https://user-test-wl2.api-victory.com/");
 	   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3000));
 	   driver.manage().window().maximize();
 	   Thread.sleep(10000);

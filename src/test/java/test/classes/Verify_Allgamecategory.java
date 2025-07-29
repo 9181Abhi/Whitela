@@ -1,6 +1,7 @@
 package test.classes;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 	
 	
 	{
-		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2000));
 		Registerpomclass register=new Registerpomclass(driver);
 		register.languagebtn();
 		Thread.sleep(1000);
@@ -88,7 +89,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 		System.out.print(slottitle);
 		Thread.sleep(2000);
 		
-		String slotgametitle="Sea Orchestra Saba Slot";
+		String slotgametitle="Turf King Saba Slot";
 		String sloterrortile="No Game Found";
 		
 		if(slottitle.equalsIgnoreCase(slotgametitle))
@@ -120,7 +121,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 		System.out.print(Livecasinoitle);
 		Thread.sleep(3000);
 		
-		String Livecasinogametitle="SG Casino Saba";
+		String Livecasinogametitle="First Person Top Card Evolution";
 		String Livecasinoerrortile="No Game Found";
 		
 		Thread.sleep(1000);
@@ -153,7 +154,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 		System.out.print(arcadeititle);
 		Thread.sleep(3000);
 		
-		String arcadegametitle="Fast Blackjack Saba Slot";
+		String arcadegametitle="Extreme Roll World Entertainment";
 		String arcadeerrortile="No Game Found";
 		
 		Thread.sleep(1000);
@@ -325,7 +326,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 		System.out.print(Fishingititle);
 		Thread.sleep(3000);
 		
-		String Fishinggametitle="Fish Hunter Haiba Joker Gaming";
+		String Fishinggametitle="Onmyoji World Entertainment";
 
 		String Fishinggameerrortile="No Game Found";
 		
@@ -343,11 +344,7 @@ public class Verify_Allgamecategory 	extends Testbaseclass
 			
 		}
 		
-		
-
-		
-		
-		//category.clickgameclose();	
+	
 		Thread.sleep(10000);
 		category.clickcategory();
 		Thread.sleep(2000);

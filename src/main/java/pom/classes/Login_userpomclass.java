@@ -16,7 +16,7 @@ public class Login_userpomclass {
 	}
 
 	
-	@FindBy(xpath="login-wrapbtn text_button-login border-login")
+	@FindBy(xpath="//a[@class='login-wrapbtn text_button-login border-login background-login_button']")
 	private WebElement Login;
 	public void login_btn()
 	{
@@ -28,7 +28,7 @@ public class Login_userpomclass {
 	private WebElement user_username;
 	public void inputusername()
 	{
-		user_username.sendKeys("Akugale39");
+		user_username.sendKeys("Akugale56");
 	}
 	
 	
@@ -40,7 +40,7 @@ public class Login_userpomclass {
 		user_Password.sendKeys("Test@123");
 	}
 	
-	@FindBy(xpath="//button[@class='login-loader loaderButton']")
+	@FindBy(xpath="//button[@class='login-loader  text_button-login border-login loaderButton']")
 	private WebElement internallogin;
 	public void internalloginbtn()
 	{

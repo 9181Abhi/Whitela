@@ -50,7 +50,7 @@ public class Verify_allpages  extends Testbaseclass
 		Allpages_Pomclass allpages= new Allpages_Pomclass(driver);
 		allpages.clickallgames();
 			String actualUrl=driver.getCurrentUrl();
-			String expectedurl="https://wl2-test-user.dev-diamondteam.com/all-games";
+			String expectedurl="https://wl2-uat-user.dev-diamondteam.com/all-games";
 	
 			Assert.assertEquals(expectedurl, actualUrl, "Allgames page not open");
 			System.out.println("Allgames page open sucesfully");
@@ -59,7 +59,7 @@ public class Verify_allpages  extends Testbaseclass
 			
 		allpages.clickReferral();
 			String actualUrl1=driver.getCurrentUrl();
-			String expectedurl1="https://wl2-test-user.dev-diamondteam.com/referral";
+			String expectedurl1="https://wl2-uat-user.dev-diamondteam.com/referral";
 
 		Assert.assertEquals(expectedurl1, actualUrl1, "Referral page not open");
 		System.out.println("Referral page  open sucessfully");
@@ -68,7 +68,7 @@ public class Verify_allpages  extends Testbaseclass
 			
 		allpages.clickPromotion();
 			String actualUrl2=driver.getCurrentUrl();
-			String expectedurl2="https://wl2-test-user.dev-diamondteam.com/promotion";
+			String expectedurl2="https://wl2-uat-user.dev-diamondteam.com/promotion";
 
 		Assert.assertEquals(expectedurl2, actualUrl2, "promotion page not open");
 		System.out.println("promotion page  open sucessfully"); 
@@ -77,7 +77,7 @@ public class Verify_allpages  extends Testbaseclass
 			
 		allpages.clickdeposit();
 			String actualUrl3=driver.getCurrentUrl();
-			String expectedurl3="https://wl2-test-user.dev-diamondteam.com/deposit";
+			String expectedurl3="https://wl2-uat-user.dev-diamondteam.com/deposit";
 
 		Assert.assertEquals(expectedurl3, actualUrl3, "Deposit page not open");
 		System.out.println("Deposit page  open sucessfully"); 
@@ -86,7 +86,7 @@ public class Verify_allpages  extends Testbaseclass
 			
 		allpages.clickWithdraw();
 			String actualUrl4=driver.getCurrentUrl();
-			String expectedurl4="https://wl2-test-user.dev-diamondteam.com/withdraw";
+			String expectedurl4="https://wl2-uat-user.dev-diamondteam.com/withdraw";
 
 		Assert.assertEquals(expectedurl4, actualUrl4, "Withdraw page not open");
 		System.out.println("Withdraw page  open sucessfully");
@@ -99,7 +99,7 @@ public class Verify_allpages  extends Testbaseclass
 		
 		allpages.clickBlog();
 		String actualUrl5=driver.getCurrentUrl();
-		String expectedurl5="https://wl2-test-user.dev-diamondteam.com/blogs";
+		String expectedurl5="https://wl2-uat-user.dev-diamondteam.com/blogs";
 
 		Assert.assertEquals(expectedurl5, actualUrl5, "Blog page not open");
 		System.out.println("Blog page  open sucessfully");
@@ -108,7 +108,7 @@ public class Verify_allpages  extends Testbaseclass
 		
 		allpages.clickAboutus();
 		String actualUrl6=driver.getCurrentUrl();
-		String expectedurl6="https://wl2-test-user.dev-diamondteam.com/about-us";
+		String expectedurl6="https://wl2-uat-user.dev-diamondteam.com/about-us";
 
 		Assert.assertEquals(expectedurl6, actualUrl6, "Aboutus page not open");
 		System.out.println("Aboutus page  open sucessfully");
@@ -117,7 +117,7 @@ public class Verify_allpages  extends Testbaseclass
 
 		allpages.clickHelp();
 		String actualUrl7=driver.getCurrentUrl();
-		String expectedurl7="https://wl2-test-user.dev-diamondteam.com/help";
+		String expectedurl7="https://wl2-uat-user.dev-diamondteam.com/help";
 		
 
 		Assert.assertEquals(actualUrl7, expectedurl7, "Help page not open");
@@ -127,7 +127,7 @@ public class Verify_allpages  extends Testbaseclass
 
 		allpages.clickTerms();
 		String actualUrl8=driver.getCurrentUrl();
-		String expectedurl8="https://wl2-test-user.dev-diamondteam.com/terms-and-conditions";
+		String expectedurl8="https://wl2-uat-user.dev-diamondteam.com/terms-and-conditions";
 
 		Assert.assertEquals(actualUrl8, expectedurl8, "Terms&Condition page not open");
 		System.out.println("Terms&Condition page  open sucessfully");
@@ -140,18 +140,15 @@ public class Verify_allpages  extends Testbaseclass
 		
 		allpages.clickAllprovider();
 		String actualUrl9=driver.getCurrentUrl();
-		String expectedurl9="https://wl2-test-user.dev-diamondteam.com/game-provider";
+		String expectedurl9="https://wl2-uat-user.dev-diamondteam.com/game-provider";
 
 		Assert.assertEquals(actualUrl9, expectedurl9, "Allprovider page not open");
 		System.out.println("Allprovider page  open sucessfully");
 		Thread.sleep(7000);
 		screenshot_class.ScreenShot(driver, "Allprovider");
-		
-		
-		System.out.println();
-		
+	
 		Thread.sleep(2000);
-		driver.close();
+		
 		
 		
 		

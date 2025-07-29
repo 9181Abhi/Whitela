@@ -50,7 +50,7 @@ public class Registerpomclass {
 	}
 	
 	
-	@FindBy(xpath="(//img[@class='me-1 flag-img'])[2]")
+	@FindBy(xpath="//span[text()='English']")
 	private WebElement englishlang;
 	public void englishlangbtn()
 	{
@@ -78,7 +78,7 @@ public class Registerpomclass {
 	private WebElement user;
 	public void user1()
 	{
-		user.sendKeys("Test954");
+		user.sendKeys("UAT982");
 	}
 	
 	
@@ -104,7 +104,7 @@ public class Registerpomclass {
 	private WebElement phno;
 	public void Click_phonenumber()
 	{
-		phno.sendKeys("0321404015");
+		phno.sendKeys("0321404645");
 	}
 	
 	
@@ -113,7 +113,7 @@ public class Registerpomclass {
 	private WebElement Email;
 	public void Click_Email1()
 	{
-		Email.sendKeys("test954@gmail.com");
+		Email.sendKeys("test982@gmail.com");
 	}
 	
 	@FindBy(xpath="//div[@class='css-1xc3v61-indicatorContainer']")
@@ -135,14 +135,14 @@ public class Registerpomclass {
 	private WebElement Accname;
 	public void Click_Accname1()
 	{
-		Accname.sendKeys("Test953");
+		Accname.sendKeys("Test982");
 	}
 	
 	@FindBy(xpath="//input[@name='account_number']")
 	private WebElement Accno;
 	public void Click_Accno1()
 	{
-		Accno.sendKeys("01216101520");
+		Accno.sendKeys("5203333333");
 	}
 	
 	@FindBy(xpath="//button[text()='Register']")
@@ -160,16 +160,9 @@ public class Registerpomclass {
 		submit.click();
 	}
 	
-//	@FindBy(xpath="//button[@class='btn register-loader reg-sub loaderButton']")
-//	private WebElement registerotherinfo;
-//	public void registerotherinfoclick()
-//	{
-//		String text=registerotherinfo.getText();
-//		System.out.println(text);
-//		
-//	}
+
 	
-	@FindBy(xpath="//input[@type='password']")
+	@FindBy(xpath="//div[@class='cg-pin']")
 	private List <WebElement> pin;
 	
 	public void click_New_Pin()

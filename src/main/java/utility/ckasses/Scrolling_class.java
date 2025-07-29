@@ -19,7 +19,7 @@ public class Scrolling_class {
 	public static void scrollDown1(WebDriver driver)
 	{
 		JavascriptExecutor js  = (JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0,600);");
+		js.executeScript("window.scrollBy(0,1500);");
 	}
 }
 
